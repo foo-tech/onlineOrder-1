@@ -18,19 +18,19 @@ public class SignUpController {
         this.customerService = customerService;
     }
 
-//    @RequestMapping(value = "/signup", method = RequestMethod.POST)
-//    public void signUp(@RequestBody Customer customer, HttpServletResponse response) throws IOException {
-//        response.setStatus(201);
-//        try{
-//            customerService.signUp(customer);
-//        }catch(Exception ex){
-//            response.setStatus(500);
-//        }
-//        // exception
+    @RequestMapping(value = "/signup", method = RequestMethod.POST)
+    public void signUp(@RequestBody Customer customer, HttpServletResponse response) throws IOException {
+        response.setStatus(201);
+        try{
+            customerService.signUp(customer);
+        }catch(Exception ex){
+            response.setStatus(500);
+        }
+        // exception
 
-//        response.setStatus(500);
-//        // successful
-//        response.setStatus(201);
-//        response.getWriter().print("Successful signUp!");
-//    }
+        response.setStatus(500);
+        // successful
+        response.setStatus(201);
+        response.getWriter().print("Successful signUp!");
+    }
 }
